@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+  <style>
+    .resume-container{
+      width: 70%;
+    }
+    .personal-container{
+      width: 70%;
+      margin-top: 10%;
+      box-shadow: 7px 7px 15px; 
+    }
+    .my-image{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-image: url(images/javed-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: 40%;
+      }
+    .personal-details-section{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .personal-row-section{
+      display: flex;
+      padding: 10px;
+      font-weight: bold;
+      background-color: darkblue;
+      color: white;
+      transition: all 0.6s;
+      margin-top: 5px;
+    }
+    .personal-row-section:hover{
+      background-color: transparent;
+      border: 1px solid darkblue;
+      color: black;
+      text-transform: uppercase;
+    }
+    .resume-section{
+      font-size: 50px;
+      font-weight: bold;
+      float: right;
+    }
+    .education-main-container{
+      margin-top: 7%;
+      margin-left: 25%;
+      }
+    .education-section{
+      width: 50%;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .degree-section{
+      width: 50%;
+      padding: 10px;
+    }
+    .mca-degree-name{
+      box-shadow: 7px 7px 15px black;
+      background-color: darkblue;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      transition: all 0.6s;
+    }
+    .mca-degree-name:hover{
+      background-color: transparent;
+      border: 1px solid darkblue;
+      color: black;
+      text-transform: uppercase;
+    }
+    .mca-degree-year{
+      font-weight: bold;
+    }
+    .mca-degree-info{
+      margin-top: 10%;
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .bca-degree-name{
+      box-shadow: 7px 7px 15px black;
+      background-color: darkblue;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      transition: all 0.6s;
+    }
+    .bca-degree-name:hover{
+      background-color: transparent;
+      border: 1px solid darkblue;
+      color: black;
+      text-transform: uppercase;
+    }
+    .bca-degree-year{
+      font-weight: bold;
+    }
+    .bca-degree-info{
+      font-size: 20px;
+      margin-top: 10%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .inter-degree-name{
+      box-shadow: 7px 7px 15px black;
+      background-color: darkblue;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      transition: all 0.6s;
+    }
+    .inter-degree-name:hover{
+      background-color: transparent;
+      border: 1px solid darkblue;
+      color: black;
+      text-transform: uppercase;
+    }
+    .inter-degree-year{
+      font-weight: bold;
+    }
+    .inter-degree-info{
+      font-size: 20px;
+      margin-top: 10%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .metric-degree-name{
+      box-shadow: 7px 7px 15px black;
+      background-color: darkblue;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      transition: all 0.6s;
+    }
+    .metric-degree-name:hover{
+      background-color: transparent;
+      border: 1px solid darkblue;
+      color: black;
+      text-transform: uppercase;
+    }
+    .metric-degree-year{
+      font-weight: bold;
+    }
+    .metric-degree-info{
+      font-size: 20px;
+      margin-top: 10%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    body{
+      background-color: rgb(241, 239, 239);
+    }
+    .btn-links{
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      font-size: larger;
+    }
+    .btn-links:hover{
+      cursor: pointer;
+      background-color: darkblue;
+      color: white;
+      border-bottom: 2px solid white;
+    }
+    .nav-links{
+      margin-left: 40%;
+      margin-right: 30%;
+    }
+    .highlight-info{
+      color: red;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .footer{
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+    }
+    .footer:hover{
+      background-color: rgb(241, 239, 239);
+      color: black;
+    }
+    .footer-heading{
+      width: 25%;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .footer-info{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    .go-to-top{
+      position: fixed;
+      top: 85%;
+      left: 92%;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 30px;
+      text-decoration: none;
+    }
+    .contact-section{
+      font-size: 25px;
+      font-weight: bold;
+      display: flex;
+      background-color: darkblue;
+      color: white;
+      padding: 10px;
+      margin-top: 5%;
+      box-shadow: 5px 5px 10px black;
+      transition: all 0.8s;
+    }
+    .contact-section:hover{
+      background-color: transparent;
+      color: black;
+      box-shadow: none;
+      border: 1px solid darkblue;
+    }
+    .skills-main-container{
+      display: block;
+      width: 70%;
+      margin-top: 5%;
+      padding: 20px;
+      box-shadow: 5px 5px 10px;
+    }
+    .skills-section{
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .btn-skills{
+      background-color: darkblue;
+      color: white;
+      border: none;
+      padding: 20px;
+      width: 150px;
+      height: 50px;
+      transition: all 0.6s;
+      font-weight: bold;
+    }
+    .btn-skills:hover{
+      background-color: transparent;
+      color: black;
+      border: 1px solid darkblue;
+    }
+    .upper-skills-section{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .middle-skills-section{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lower-skills-section{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="home">
+    <section class="nav-links">
+      <a href="portfolioWebsite.html" title="Click to see home section"><button class="btn-links">Home</button></a>
+      <a href="resume.html" title="Click to see about me"><button class="btn-links">Resume</button></a>
+      <a href="#" title="Click to see about projects"><button class="btn-links">Projects</button></a>
+      <a href="resume-contact.html" title="Click to see my contacts"><button class="btn-links">Contact</button></a>
+    </section>
+    <div class="contact-section">
+      <section style="width:50%;">
+        <section >MD JAVED AKHTAR</section>
+        <section >mdjavedakhtar7323@gmail.com</section>
+        <section >7323827463</section>
+      </section>
+      <section  style="width:50%;">
+        <section class="resume-section">Resume</section>
+      </section>
+    </div>
+  </div>
+
+  <!-- personal details section code starts from here -->
+  <div class="personal-container">
+      <section class="personal-details-section">
+        Personal-Details
+      </section>
+      <section class="my-image">
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Date of birth :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            08/09/2000
+          </section>  
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Marital Status :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            Single
+          </section>
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Gender :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            Male
+          </section>
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Permanent Address :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            C-399, Omicron-1, Greater-Noida,UP, 201310
+          </section>
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Nationality :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            Indian
+          </section>
+      </section>
+      <section class="personal-row-section">
+          <section style="width: 50%;">
+            Known languages :
+          </section>
+          <section style="width: 50%;text-align: right;">
+            Hindi and English
+          </section>
+      </section>
+  </div>
+  <!-- personal details section code ends here -->
+  <div class="education-main-container">
+    <div style="display: flex;box-shadow: 7px 7px 15px;">
+      <section class="education-section">
+        Education
+      </section>
+      <section class="degree-section"> 
+        <div style="display: flex;">
+          <section style="width: 20%;">
+            <section class="mca-degree-year">
+              2022-2024
+            </section>
+          </section>
+          
+          <section style="width: 80%;">
+            <div class="mca-degree-name">
+              Master of computer application(MCA)
+            </div>
+            <div class="mca-degree-info">
+              I have done Post-Graduation from 
+              <span class="highlight-info">
+                IIMT College of Engineering, Greater-Noida(Uttar Pradesh).
+              </span>
+              I have got 
+              <span class="highlight-info">
+                70.9% Marks
+              </span> in 1st semester
+            </div>
+          </section>
+        </div>
+
+        <div style="display: flex;margin-top: 20%;">
+          <section style="width: 20%;">
+            <section class="bca-degree-year">
+              2018-2021
+            </section>
+          </section>
+          
+          <section style="width: 80%;">
+            <section class="bca-degree-name">
+              Bachelor of computer application(BCA)
+            </section>
+            <section class="bca-degree-info">
+              I have done my Graduation from 
+              <span class="highlight-info">
+                Anugrah Memorial College Gaya(Bihar).
+              </span>
+              I have got 
+              <span class="highlight-info">
+                77.2% Marks
+              </span> in Graduation
+            </section>
+          </section>
+        </div>
+
+        <div style="display: flex;margin-top: 20%;">
+          <section style="width: 20%;">
+            <section class="inter-degree-year">
+              2016-2018
+            </section>
+          </section>
+          
+          <section style="width: 80%;">
+            <section class="inter-degree-name">
+              Intermediate of science(I.SC)
+            </section>
+
+            <section class="inter-degree-info">
+              I have done my Intermediate from 
+              <span class="highlight-info">
+                S.M.S.G College Sherghati, Gaya(Bihar).
+              </span>
+              I have got 
+              <span class="highlight-info">
+                45.6% Marks
+              </span> in Intermediate
+            </section>
+          </section>
+        </div>
+
+        <div style="display: flex;margin-top: 20%;">
+          <section style="width: 20%;">
+            <section class="metric-degree-year">
+              2015-2016
+            </section>
+          </section>
+          
+          <section style="width: 80%;">
+            <section class="metric-degree-name">
+              Metric(High School)
+            </section>
+            <section class="metric-degree-info">
+              I have done my High School from 
+              <span class="highlight-info">
+                A.N.S +2 High School Suggi, Gaya(Bihar).
+              </span> I have got 
+              <span class="highlight-info">
+                59.2% Marks
+              </span> in 10th
+            </section>
+          </section>
+        </div>
+      </section>
+    </div>  
+  </div>
+  <br>
+  <div class="skills-main-container">
+    <section class="skills-section">Skills</section>
+    <section class="upper-skills-section"style="display: flex;">
+      <section style="width: 30%;">
+        <button class="btn-skills">HTML</button>
+      </section>
+      <section style="width: 30%;">
+        <button class="btn-skills">CSS</button>
+      </section>
+      <section style="width: 30%;">
+        <button class="btn-skills">JAVASCRIPT</button>
+      </section>
+    </section>
+
+    <section class="middle-skills-section"style="display: flex;">
+      <section style="width: 30%;">
+        <button class="btn-skills">C</button>
+      </section>
+      <section style="width: 30%;">
+        <button class="btn-skills">JAVA</button>
+      </section>
+      <section style="width: 30%;">
+        <button class="btn-skills">C++</button>
+      </section>
+    </section>
+
+    <section class="lower-skills-section"style="display: flex;">
+    <section style="width: 30%;">
+      <button class="btn-skills">SQL</button>
+    </section>
+    <section style="width: 30%;">
+      <button class="btn-skills">C#</button>
+    </section>
+    <section style="width: 30%;">
+      <button class="btn-skills">BOOTSTRAP</button>
+    </section>
+    </section>
+  </div>
+  <br>
+  <!-- footer code starts from here -->
+  <div class="footer" style="padding-left: 0;">
+    <div style="display: flex;">
+      <div class="footer-heading">Phone</div>
+      <div class="footer-heading" >Email</div>
+      <div class="footer-heading">Follow Me</div>
+      <div class="footer-heading">Developer</div>
+    </div>
+    <div style="display: flex;">
+      <div class="footer-info" style="width: 20%;">7323827463</div>
+      <div class="footer-info" style="width: 30%;">mdjavedakhtar7323@gmail.com</div>
+      <div class="footer-info" style="width: 20%;">Insta: javedakhtar2_0</div>
+      <div class="footer-info" style="width: 30%;">Page is created by JAVED AKHTAR</div>
+    </div>
+    <br><br><br><br><br>
+    <a href="#home"><div class="go-to-top">TOP</div></a>
+  </div>
+</body>
+</html>

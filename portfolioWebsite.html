@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <style>
+      body{
+        margin: 0px;
+      }
+      .background-image{
+        width: 100%;
+        height: 900px;
+        background-size: contain;
+        background-image: url(images/resume-bg.jpg);
+        
+      }
+      
+      .btn-links{
+        margin-top: 15px;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        font-size: larger;
+      }
+      .btn-links:hover{
+        cursor: pointer;
+        background-color: darkblue;
+        color: white;
+        border-bottom: 2px solid white;
+      }
+      .nav-links{
+        margin-left: 40%;
+        position: absolute;
+        
+      }
+      .my-name{
+        top: 10%;
+        left: 42%;
+        position: absolute;
+        font-size: 30px;
+        color: darkblue;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        box-shadow: 5px 5px 10px darkblue;
+
+      }
+      .text-on-image{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-weight: bold;
+        font-size: 30px;
+        color: darkblue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .my-image{
+        position: relative;
+        top: 30%;
+        left: 30%;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        background-image: url(images/javed-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+      }
+      .my-image:hover{
+        transform: scale(1.7);
+      }
+      .about-me{
+        color: white;
+        top: 50%;
+        font-size: 15px;
+        background-color: darkblue;
+        font-weight: normal;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .about-me:hover{
+        background-color: transparent;
+        border: 1px solid darkblue;
+        color: black;
+      }
+      .links-on-image{
+        position: absolute;
+        top: 90%;
+        left: 30%;
+      }
+      .btn-shape-links{
+        padding: 40px;
+        border-radius: 50%;
+        margin-left: 20px;
+        border: none;
+        font-size: 30px;
+        box-shadow: 7px 7px 10px black;
+        height: 190px;
+      }
+      .btn-resume{
+        background-color: brown;
+      }
+      .btn-projects{
+        background-color: chartreuse;
+      }
+      .btn-contact{
+        background-color: darkgoldenrod;
+      }
+      .btn-shape-links:hover{
+        background-color: darkblue;
+        color: white;
+        cursor: pointer;
+      }
+      .footer{
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+      }
+      .footer:hover{
+        background-color: lightgray;
+        color: black;
+      }
+      .footer-heading{
+        width: 25%;
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .footer-info{
+        width: 25%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .go-to-top{
+        position: fixed;
+        top: 85%;
+        left: 92%;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 30px;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+  <div class="background-image">
+    <p class="text-on-image">Hello!</p>
+    <p class="text-on-image" style="color:red;top: 43%;
+    font-size: 15px;">A Bit About Me</p>
+    <div class="nav-links" id="home">
+      <a href="#" title="Click to see home section"><button class="btn-links">Home</button></a>
+      <a href="resume.html" title="Click to see about me"><button class="btn-links">Resume</button></a>
+      <a href="#" title="Click to see about projects"><button class="btn-links">Projects</button></a>
+      <a href="resume-contact.html" title="Click to see my contacts"><button class="btn-links">Contact</button></a>
+    </div>
+    <div class="my-name">MD JAVED AKHTAR</div>
+    <div class="text-on-image about-me">
+      <p>I am JAVED AKHTAR , i have created this page using front end languages <br>and looking for an opportunity to do great in the web development.</p>
+    </div>
+    <div class="my-image"></div>
+    <div class="links-on-image">
+      <a href="resume.html" title="Click to see my RESUME"><button class="btn-shape-links btn-resume">Resume</button></a>
+      <a href="#" title="Click to see my PROJECTS"><button class="btn-shape-links btn-projects">Projects</button></a>
+      <a href="resume-contact.html" title="see how you can CONTACT me"><button class="btn-shape-links btn-contact">Contact</button></a>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div style="display: flex;">
+      <div class="footer-heading">Phone</div>
+      <div class="footer-heading">Email</div>
+      <div class="footer-heading">Follow Me</div>
+      <div class="footer-heading">Developer</div>
+    </div>
+    <div style="display: flex;">
+      <div class="footer-info">7323827463</div>
+      <div class="footer-info">mdjavedakhtar7323@gmail.com</div>
+      <div class="footer-info">Insta: javedakhtar2_0</div>
+      <div class="footer-info">Page is created by JAVED AKHTAR</div>
+    </div>
+    <br><br><br><br><br>
+    <a href="#home"><div class="go-to-top">TOP</div></a>
+  </div>
+</body>
+
+
+
+
+<!-- <div class="companyLogo">
+  <a href="#"><img src="images/logo.jpg" alt="company logo" class="logo"></a>
+ </div>
+ <div class="searchBar">
+  <input type="text" placeholder="search the page" class="txtSearch">
+  <button class="btnSearch">Search</button>
+ </div> -->
+</html>

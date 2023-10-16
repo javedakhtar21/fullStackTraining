@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+      body{
+        background-color: rgb(241, 239, 239);
+    }
+    .contact-main-container{
+      display: flex;
+      box-shadow: 5px 5px 10px;
+      padding: 20px;
+      width: 70%;
+      margin-left: 13%;
+      margin-top: 10%;
+    }
+    .btn-submit{
+      height: 140px;
+      width: 50%;
+      border-radius: 50%;
+      margin-top: 20px;
+      margin-left: 40px;
+      background-color: goldenrod;
+      font-weight: bold;
+      border: none;
+      font-size: 20px;
+      transition: all 0.6s;
+    }
+    .btn-submit:hover{
+      background-color: darkblue;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-links{
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      font-size: larger;
+    }
+    .btn-links:hover{
+      cursor: pointer;
+      background-color: darkblue;
+      color: white;
+      border-bottom: 2px solid white;
+    }
+    .nav-links{
+      margin-left: 40%;
+      margin-right: 30%;
+    }
+    .footer{
+      background-color: darkblue;
+      color: white;
+      padding: 20px;
+    }
+    .footer:hover{
+      background-color: rgb(241, 239, 239);
+      color: black;
+    }
+    .footer-heading{
+      width: 25%;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .footer-info{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    .go-to-top{
+      position: fixed;
+      top: 85%;
+      left: 92%;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 30px;
+      text-decoration: none;
+    }
+    
+    </style>
+</head>
+<body>
+  <div>
+    <section class="nav-links">
+      <a href="portfolioWebsite.html" title="Click to see home section"><button class="btn-links">Home</button></a>
+      <a href="resume.html" title="Click to see about me"><button class="btn-links">Resume</button></a>
+      <a href="#" title="Click to see about projects"><button class="btn-links">Projects</button></a>
+      <a href="resume-contact.html" title="Click to see my contacts"><button class="btn-links">Contact</button></a>
+    </section>
+  </div>
+  <div class="contact-main-container">
+    <section style="width: 40%;display: block;">
+      <section style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <span style="font-size: 40px;font-weight: bold;">Contact</span><br>
+        Looking forward to hearing from you
+      </section>
+      <section style="margin-top: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <span style="font-size: 20px;font-weight: bold;">Phone</span><br>
+        7323827463
+      </section>
+      <section style="margin-top: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <span style="font-size: 20px;font-weight: bold;">Email</span><br>
+        mdjavedakhtar7323@gmail.com
+      </section>
+    </section>
+
+    <section style="width: 60%;">
+      <section style="display: flex;">
+        <section style="width: 50%;">
+          <form>
+            <label for="first-name" style="font-size: 20px;font-weight: bold;">First Name</label><br>
+            <input type="text" placeholder="type your first name" style="height: 40px;width: 90%;">
+          </form>
+        </section>
+        <section style="width: 50%;">
+          <form>
+            <label for="last-name" style="font-size: 20px;font-weight: bold;">Last Name</label><br>
+            <input type="text" placeholder="type your last name" style="height: 40px;width: 90%;">
+          </form>
+        </section>
+      </section>
+
+      <section style="display: flex;margin-top: 20px;">
+        <section style="width: 50%;">
+          <form>
+            <label for="email" style="font-size: 20px;font-weight: bold;">Email</label><br>
+            <input type="text" placeholder="type your email" style="height: 40px;width: 90%;">
+          </form>
+        </section>
+        <section style="width: 50%;">
+          <form>
+            <label for="Subject" style="font-size: 20px;font-weight: bold;">Subject</label><br>
+            <input type="text" placeholder="type your subject" style="height: 40px;width: 90%;">
+          </form>
+        </section>
+      </section>
+
+      <section style="display: flex;margin-top: 20px;">
+        <section style="width: 50%;">
+          <form>
+            <label for="message" style="font-size: 20px;font-weight: bold;">Message</label><br>
+            <textarea id="message" cols="33" rows="10" placeholder="type your message here!"></textarea>
+          </form>
+        </section>
+        <section style="width: 50%;">
+          <form>
+            <input type="button" value="Submit" class="btn-submit">
+          </form>
+        </section>
+      </section>
+    </section>
+  </div><br>
+
+  <!-- footer code starts from here -->
+  <div class="footer" style="padding-left: 0;">
+    <div style="display: flex;">
+      <div class="footer-heading">Phone</div>
+      <div class="footer-heading" >Email</div>
+      <div class="footer-heading">Follow Me</div>
+      <div class="footer-heading">Developer</div>
+    </div>
+    <div style="display: flex;">
+      <div class="footer-info" style="width: 20%;">7323827463</div>
+      <div class="footer-info" style="width: 30%;">mdjavedakhtar7323@gmail.com</div>
+      <div class="footer-info" style="width: 20%;">Insta: javedakhtar2_0</div>
+      <div class="footer-info" style="width: 30%;">Page is created by JAVED AKHTAR</div>
+    </div>
+    <br><br><br><br><br>
+    <a href="#home"><div class="go-to-top">TOP</div></a>
+  </div>
+</body>
+</html>
